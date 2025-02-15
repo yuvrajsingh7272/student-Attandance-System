@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white transition duration-300">
+
+    <div class="container mx-auto mt-10 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg w-full md:w-3/4 lg:w-1/2">
+        <h1 class="text-2xl font-bold text-center text-blue-600 dark:text-blue-400 mb-5">📋 Student Attendance System</h1>
+
+        <!-- Input & Add Button -->
+        <div class="flex gap-2 mb-4">
+            <input type="text" id="studentName" placeholder="Enter Student Name"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring focus:ring-blue-400 dark:bg-gray-700">
+            <button onclick="addStudent()"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition duration-300">➕ Add</button>
+        </div>
+
+        <!-- Student Table -->
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-gray-300 dark:border-gray-600">
+                <thead>
+                    <tr class="bg-blue-500 text-white">
+                        <th class="p-3">Student Name</th>
+                        <th class="p-3">Attendance</th>
+                    </tr>
+                </thead>
+                <tbody id="studentList" class="text-center"></tbody>
+            </table>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="mt-5 flex justify-between">
+            <button onclick="saveAttendance()"
+                class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition duration-300">💾 Save</button>
+            <button onclick="clearAttendance()"
+                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition duration-300">🗑️ Clear</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
